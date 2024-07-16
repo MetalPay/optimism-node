@@ -7,11 +7,7 @@ while [ ! -f /shared/initialized.txt ]; do
   sleep 1
 done
 
-if [ -n "${IS_CUSTOM_CHAIN+x}" ]; then
-  export EXTENDED_ARG="${EXTENDED_ARG:-} --rollup.config=/chainconfig/rollup.json"
-else
-  export EXTENDED_ARG="${EXTENDED_ARG:-} --network=$NETWORK_NAME --rollup.load-protocol-versions=true --rollup.halt=major"
-fi
+export EXTENDED_ARG="${EXTENDED_ARG:-} --rollup.config=/chainconfig/rollup.json"
 
 # Start op-node.
 exec op-node \
