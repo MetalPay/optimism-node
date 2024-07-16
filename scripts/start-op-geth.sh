@@ -61,5 +61,6 @@ exec geth \
   --state.scheme=hash \
   --networkid="${NETWORK_ID}" \
   --nodiscover \
+  --nat=extip:0.0.0.0 \
   $EXTENDED_ARG $@
 
