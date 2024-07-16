@@ -22,6 +22,5 @@ exec op-node \
   --metrics.enabled \
   --metrics.addr=0.0.0.0 \
   --metrics.port=7300 \
-  --syncmode=execution-layer \
   --override.fjord=1720627201 \
   $EXTENDED_ARG $@
