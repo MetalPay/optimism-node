@@ -30,7 +30,6 @@ fi
 # Start op-geth.
 exec geth \
   --datadir="$BEDROCK_DATADIR" \
-  --verbosity=4 \
   --http \
   --http.corsdomain="*" \
   --http.vhosts="*" \
