@@ -16,9 +16,7 @@ if [ -z "${IS_CUSTOM_CHAIN+x}" ]; then
 fi
 
 # Init genesis if custom chain
-if [ -n "${IS_CUSTOM_CHAIN+x}" ]; then
-  geth init --datadir="$BEDROCK_DATADIR" /chainconfig/genesis.json
-fi
+geth init --datadir="$BEDROCK_DATADIR" /chainconfig/genesis.json
 
 # Determine syncmode based on NODE_TYPE
 if [ -z "${OP_GETH__SYNCMODE+x}" ]; then
