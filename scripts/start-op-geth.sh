@@ -60,5 +60,6 @@ exec geth \
   --db.engine=pebble \
   --state.scheme=hash \
   --networkid="${NETWORK_ID}" \
+  --nodiscover \
   $EXTENDED_ARG $@
 
