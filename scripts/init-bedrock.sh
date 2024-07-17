@@ -42,6 +42,8 @@ elif [ "$NODE_TYPE" = "archive" ]; then
     BEDROCK_TAR_DOWNLOAD="https://base-snapshots-goerli-archive.s3.amazonaws.com/$(curl -s https://base-snapshots-goerli-archive.s3.amazonaws.com/latest)"
   elif [ "$NETWORK_NAME" = "base-sepolia" ]; then
     BEDROCK_TAR_DOWNLOAD="https://base-snapshots-sepolia-archive.s3.amazonaws.com/$(curl -s https://base-snapshots-sepolia-archive.s3.amazonaws.com/latest)"
+  elif [ "$NETWORK_NAME" = "metal-mainnet" ]; then
+    BEDROCK_TAR_DOWNLOAD="https://metall2-snapshots-mainnet-archive.s3.amazonaws.com/latest.tar.zst"
   fi
 fi
 
