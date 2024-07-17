@@ -16,7 +16,7 @@ if [ -z "${IS_CUSTOM_CHAIN+x}" ]; then
 fi
 
 # Init genesis if custom chain
-geth --verbosity=4 init --datadir="$BEDROCK_DATADIR" /chainconfig/genesis.json
+geth init --datadir="$BEDROCK_DATADIR" /chainconfig/genesis.json
 
 # Determine syncmode based on NODE_TYPE
 if [ -z "${OP_GETH__SYNCMODE+x}" ]; then
@@ -55,8 +55,6 @@ exec geth \
   --rollup.disabletxpoolgossip=true \
   --port="${PORT__OP_GETH_P2P:-39393}" \
   --discovery.port="${PORT__OP_GETH_P2P:-39393}" \
-  --db.engine=pebble \
-  --state.scheme=hash \
   --networkid="${NETWORK_ID}" \
   --nodiscover \
   --nat=extip:0.0.0.0 \
