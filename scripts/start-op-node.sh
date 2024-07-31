@@ -11,4 +11,6 @@ done
 exec op-node \
   --l1=$OP_NODE__RPC_ENDPOINT \
   --l1.beacon=$OP_NODE__L1_BEACON \
+  --rollup.halt=major \
+  --rollup.load-protocol-versions=true \
   --override.fjord=1720627201

@@ -66,5 +66,6 @@ exec geth \
   --nodiscover \
   --nat=extip:0.0.0.0 \
   --override.fjord=1720627201 \
+  --rollup.superchain-upgrades \
   $EXTENDED_ARG $@
 
