@@ -65,5 +65,6 @@ exec geth \
   --networkid="${NETWORK_ID}" \
   --nodiscover \
   --nat=extip:0.0.0.0 \
+  --override.fjord=1720627201 \
   $EXTENDED_ARG $@
 
